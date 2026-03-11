@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="id" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infografis Budaya Manokwari v3 - Papua Barat</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+      * {
+        font-family: "Quicksand", sans-serif;
+      }
+      .font-display {
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f0f9f7;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #2d9b6f;
+        border-radius: 5px;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-15px) rotate(5deg);
+        }
+      }
+      @keyframes bounce-gentle {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+      @keyframes slide-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+      .animate-bounce-gentle {
+        animation: bounce-gentle 2s ease-in-out infinite;
+      }
+      .animate-slide-up {
+        animation: slide-in-up 0.6s ease-out forwards;
+      }
+
+      .reveal,
+      .reveal-left,
+      .reveal-right {
+        opacity: 0;
+        transition: all 0.8s ease-out;
+      }
+      .reveal {
+        transform: translateY(30px);
+      }
+      .reveal-left {
+        transform: translateX(-50px);
+      }
+      .reveal-right {
+        transform: translateX(50px);
+      }
+      .reveal.active,
+      .reveal-left.active,
+      .reveal-right.active {
+        opacity: 1;
+        transform: translate(0);
+      }
+
+      .card-hover {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .card-hover:hover {
+        transform: translateY(-12px) scale(1.02);
+      }
+
+      .info-box {
+        background: linear-gradient(
+          135deg,
+          rgba(45, 155, 111, 0.1),
+          rgba(72, 201, 152, 0.1)
+        );
+        border: 2px solid #48c998;
+        border-radius: 15px;
+        padding: 20px;
+      }
+
+      /* nice image overlay */
+      .img-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.05));
+      }
+    </style>
+  </head>
+
+  <body class="h-full bg-[#f0f9f7] text-[#1a3a2a] overflow-auto">
+    <div id="app-wrapper" class="w-full h-full overflow-auto">
+      <!-- NAV -->
+      <nav
+        class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#2d9b6f]/20 shadow-md"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center gap-3">
+              <div
+                class="animate-float w-10 h-10 bg-[#2d9b6f] rounded-lg flex items-center justify-center text-white font-bold"
+              >
+                M
+              </div>
+              <span class="font-display text-lg font-bold text-[#2d9b6f]"
+                >Manokwari Maju</span
+              >
+            </div>
+
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm">
+              <a href="#beranda" class="hover:text-[#2d9b6f]">Beranda</a>
+              <a href="#wilayah" class="hover:text-[#2d9b6f]">Wilayah</a>
+              <a href="#flora-fauna" class="hover:text-[#2d9b6f]">Flora & Fauna</a>
+              <a href="#kuliner" class="hover:text-[#2d9b6f]">Kuliner</a>
+              <a href="#tradisi" class="hover:text-[#2d9b6f]">Tradisi</a>
+              <a href="#tari" class="hover:text-[#2d9b6f]">Seni Tari</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- HERO -->
+<section
+  id="beranda"
+  class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden"
+>
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img
+      src="https://asset.kompas.com/crops/IC0o2twc4bXE1ujMCH2DrnTV6uQ=/0x0:780x520/1200x800/data/photo/2018/08/23/874544948.JPG"
+      alt="Pemandangan Manokwari"
+      class="w-full h-full object-cover"
+    />
+    <!-- Overlay biar teks tetap kebaca -->
+    <div class="absolute inset-0 bg-black/60"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-6xl mx-auto px-4 text-center animate-slide-up text-white">
+    <h1 class="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight">
+      <span class="text-[#48c998]">Papua Barat</span> <br />
+      <span class="text-white">Manokwari</span>
+    </h1>
+    <p
+      class="text-lg md:text-2xl max-w-3xl mx-auto mb-12 font-medium text-white/90"
+    >
+      Gerbang sejarah dan budaya di Tanah Papua, Kota Injil yang menyimpan
+      kemegahan alam Arfak.
+    </p>
+
+    <div class="flex items-center justify-center gap-3">
+      <a
+        href="#flora-fauna"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-[#2d9b6f] text-white rounded-full font-bold shadow-lg hover:opacity-90 transition"
+      >
+        Jelajahi Flora & Fauna
+        <span class="animate-bounce-gentle">↓</span>
+      </a>
+      <a
+        href="#kuliner"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-white/90 text-[#2d9b6f] rounded-full font-bold shadow-lg hover:bg-white transition"
+      >
+        Cek Kuliner Khas
+        <span>🍽️</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+      <!-- WILAYAH -->
+      <section id="wilayah" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16 reveal">
+            <span
+              class="inline-block px-4 py-2 bg-[#48c998]/20 text-[#2d9b6f] rounded-full text-sm font-bold mb-4"
+              >📍 GEOGRAFI</span
+            >
+            <h2 class="font-display text-3xl md:text-5xl font-bold mb-4 text-[#1a3a2a]">
+              Wilayah Manokwari
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal-left">
+              <div class="relative overflow-hidden rounded-[2.5rem] shadow-2xl group">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Manokwari_Metro_Area.jpg"
+                  alt="Pemandangan Manokwari"
+                  class="w-full h-[500px] object-cover transition-transform duration-1000 group-hover:scale-110"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div class="absolute bottom-8 left-8 text-white">
+                  <p class="font-bold text-xl">Wilayah Geografi</p>
+                  <p class="text-sm opacity-80">Lokasi Manokwari di Pulau Papua</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal-right space-y-6">
+              <div class="info-box border-l-8 border-[#2d9b6f]">
+                <h3 class="font-display text-xl font-bold mb-2">Luas & Topografi</h3>
+                <p class="text-[#555] text-sm">
+                  Membentang seluas 14.445 km², wilayah ini didominasi oleh Pegunungan
+                  Arfak yang megah dan wilayah pesisir yang kaya akan ekosistem laut.
+                </p>
+              </div>
+
+              <div class="grid grid-cols-2 gap-4">
+                <div class="p-4 bg-[#f0f9f7] rounded-xl border border-[#2d9b6f]/20">
+                  <p class="text-[#2d9b6f] font-bold text-lg">Iklim</p>
+                  <p class="text-xs text-[#555]">Tropis basah dengan hujan melimpah.</p>
+                </div>
+                <div class="p-4 bg-[#f0f9f7] rounded-xl border border-[#2d9b6f]/20">
+                  <p class="text-[#2d9b6f] font-bold text-lg">Arfak</p>
+                  <p class="text-xs text-[#555]">Habitat endemik & lanskap berkabut.</p>
+                </div>
+              </div>
+
+              <div class="p-5 bg-white rounded-2xl border border-[#2d9b6f]/20 shadow">
+                <p class="font-bold text-[#1a3a2a] mb-1">Catatan singkat:</p>
+                <p class="text-sm text-[#555]">
+                  Kalau Manokwari punya “mode” default, itu hijau + sejuk + tiba-tiba
+                  hujan. Bukan drama, itu fitur. 🌧️
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FLORA & FAUNA (NEW) -->
+      <section id="flora-fauna" class="py-24 bg-[#f0f9f7]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16 reveal">
+            <span
+              class="inline-block px-4 py-2 bg-[#2d9b6f]/20 text-[#2d9b6f] rounded-full text-sm font-bold mb-4"
+              >🦋 FLORA & FAUNA</span
+            >
+            <h2 class="font-display text-3xl md:text-5xl font-bold mb-4 text-[#1a3a2a]">
+              Fakta Unik Alam Manokwari
+            </h2>
+            <p class="text-[#555] max-w-2xl mx-auto">
+              Dari hutan Arfak sampai pesisir, Papua Barat itu “surga biodiveristas” —
+              bukan sekadar slogan, tapi realitas.
+            </p>
+          </div>
+
+          <!-- highlight banner -->
+          <div class="reveal max-w-6xl mx-auto mb-12">
+            <div
+              class="rounded-[2rem] border-2 border-[#48c998] bg-white shadow-xl overflow-hidden"
+            >
+              <div class="grid md:grid-cols-2">
+                <div class="p-8">
+                  <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#48c998]/20 text-[#2d9b6f] font-bold text-sm"
+                  >
+                    🌿 Tahukah Anda?
+                  </div>
+                  <h3 class="font-display text-2xl md:text-3xl font-extrabold mt-4">
+                    Pegunungan Arfak
+                    <span class="text-[#2d9b6f]">kaya spesies endemik</span>
+                  </h3>
+                  <p class="text-sm text-[#555] mt-3 leading-relaxed">
+                    Kawasan Arfak dikenal luas sebagai rumah beragam burung, anggrek,
+                    dan kupu-kupu eksotis. Banyak satwa/flora di sini punya sebaran
+                    terbatas (endemik), jadi nilainya tinggi untuk konservasi.
+                  </p>
+
+                  <div class="mt-6 grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-[#f0f9f7] rounded-xl border border-[#2d9b6f]/15">
+                      <p class="text-[#2d9b6f] font-bold text-lg">Hutan</p>
+                      <p class="text-xs text-[#555]">Lembap, berkabut, produktif.</p>
+                    </div>
+                    <div class="p-4 bg-[#f0f9f7] rounded-xl border border-[#2d9b6f]/15">
+                      <p class="text-[#2d9b6f] font-bold text-lg">Pesisir</p>
+                      <p class="text-xs text-[#555]">Ekosistem laut & mangrove.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="relative min-h-[320px] md:min-h-full">
+                  <!-- Image: Arfak landscape (Wikimedia) -->
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Pegunungan_Arfak%2C_Papua_Barat.jpg"
+                    alt="Pegunungan Arfak, Papua Barat"
+                    class="absolute inset-0 w-full h-full object-cover"
+                    onerror="this.src='https://asset.kompas.com/crops/IC0o2twc4bXE1ujMCH2DrnTV6uQ=/0x0:780x520/1200x800/data/photo/2018/08/23/874544948.JPG';"
+                  />
+                  <div class="img-overlay"></div>
+                  <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <p class="font-bold text-xl">Pegunungan Arfak</p>
+                    <p class="text-sm opacity-85">Kabut, hijau, dan ekosistem unik</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- cards -->
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Cenderawasih -->
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#2d9b6f] card-hover shadow-lg"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Paradisaea_raggiana_Raggiana_Bird-of-paradise.jpg"
+                  alt="Burung Cenderawasih"
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://tribratanews.polri.go.id/web/image/blog.post/61919/image';"
+                />
+                <div class="img-overlay"></div>
+                <div class="absolute bottom-4 left-5 text-white">
+                  <p class="font-bold text-lg">Cenderawasih</p>
+                  <p class="text-xs opacity-85">ikon satwa Papua</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-2 text-[#2d9b6f]">
+                  “Burung Surga”
+                </h3>
+                <p class="text-sm text-[#555]">
+                  Spesies burung cenderawasih terkenal dengan tarian kawin dan bulu
+                  dekoratifnya. Banyak jenisnya terkait kawasan Papua dan hutan-hutan
+                  pegunungan.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#48c998]/20 text-[#2d9b6f]"
+                    >Fauna</span
+                  >
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#2d9b6f]/10 text-[#2d9b6f]"
+                    >Hutan</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Kupu-kupu Sayap Burung -->
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#48c998] card-hover shadow-lg"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Ornithoptera_priamus_urfk.jpg"
+                  alt="Kupu-kupu Sayap Burung (Ornithoptera)"
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/7/78/Priamuspronomus.jpg';"
+                />
+                <div class="img-overlay"></div>
+                <div class="absolute bottom-4 left-5 text-white">
+                  <p class="font-bold text-lg">Ornithoptera</p>
+                  <p class="text-xs opacity-85">kupu-kupu raksasa</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-2 text-[#2d9b6f]">
+                  Surga Kupu-kupu
+                </h3>
+                <p class="text-sm text-[#555]">
+                  Papua dikenal dengan kelompok “birdwing” (Ornithoptera) yang besar dan
+                  mencolok. Beberapa jenis hidup di habitat hutan lembap.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#48c998]/20 text-[#2d9b6f]"
+                    >Fauna</span
+                  >
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#2d9b6f]/10 text-[#2d9b6f]"
+                    >Serangga</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Kanguru Pohon -->
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#2d9b6f] card-hover shadow-lg"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Tree-kangaroo.jpg"
+                  alt="Kanguru Pohon"
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://i.cdn.newsbytesapp.com/ind/images/l74420250401080857.jpeg';"
+                />
+                <div class="img-overlay"></div>
+                <div class="absolute bottom-4 left-5 text-white">
+                  <p class="font-bold text-lg">Kanguru Pohon</p>
+                  <p class="text-xs opacity-85">marsupial hutan Papua</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-2 text-[#2d9b6f]">
+                  Kanguru yang Naik Pohon
+                </h3>
+                <p class="text-sm text-[#555]">
+                  Papua punya kanguru pohon (Dendrolagus) yang beradaptasi hidup di
+                  pepohonan. Jarang terlihat, tapi keberadaannya penting untuk ekosistem.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#48c998]/20 text-[#2d9b6f]"
+                    >Fauna</span
+                  >
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#2d9b6f]/10 text-[#2d9b6f]"
+                    >Endemik</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Anggrek Papua -->
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#48c998] card-hover shadow-lg"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Dendrobium_phalaenopsis_orchid.jpg"
+                  alt="Anggrek Papua"
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwrpTTMf1tVEz7t7GCHVfeOZenSfC3HK-7Kw&s';"
+                />
+                <div class="img-overlay"></div>
+                <div class="absolute bottom-4 left-5 text-white">
+                  <p class="font-bold text-lg">Anggrek</p>
+                  <p class="text-xs opacity-85">flora eksotis</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-2 text-[#2d9b6f]">
+                  Anggrek Papua
+                </h3>
+                <p class="text-sm text-[#555]">
+                  Papua terkenal dengan kekayaan anggrek. Banyak jenis tumbuh di area
+                  lembap dan pegunungan, dengan variasi bentuk & warna yang kuat.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#48c998]/20 text-[#2d9b6f]"
+                    >Flora</span
+                  >
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#2d9b6f]/10 text-[#2d9b6f]"
+                    >Hutan</span
+                  >
+                </div>
+              </div>
+            </div>
+
+          
+
+            <!-- Mangrove / Pesisir -->
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#48c998] card-hover shadow-lg"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Mangrove_forest_in_Indonesia.jpg"
+                  alt="Hutan Mangrove"
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://thumbs.dreamstime.com/b/mangrove-park-manokwari-path-pillars-bridge-mangrove-trees-roots-growing-up-water-sea-low-tide-157968005.jpg';"
+                />
+                <div class="img-overlay"></div>
+                <div class="absolute bottom-4 left-5 text-white">
+                  <p class="font-bold text-lg">Mangrove</p>
+                  <p class="text-xs opacity-85">benteng pesisir</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-2 text-[#2d9b6f]">
+                  Benteng Alami Pesisir
+                </h3>
+                <p class="text-sm text-[#555]">
+                  Ekosistem mangrove melindungi garis pantai, jadi rumah biota muda, dan
+                  bantu menahan abrasi. Kalau mangrove hilang, pantai jadi gampang “baper”.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#48c998]/20 text-[#2d9b6f]"
+                    >Flora</span
+                  >
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#2d9b6f]/10 text-[#2d9b6f]"
+                    >Pesisir</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- small note -->
+          <div class="reveal max-w-6xl mx-auto mt-12">
+            <div class="p-6 bg-white rounded-2xl border border-[#2d9b6f]/20 shadow">
+              <p class="font-bold text-[#1a3a2a] mb-1">Catatan:</p>
+              <p class="text-sm text-[#555]">
+                Gambar diambil dari sumber publik (Wikimedia) dan disiapkan fallback ke
+                Unsplash kalau link utama error.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KULINER (NEW) -->
+      <section id="kuliner" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16 reveal">
+            <span
+              class="inline-block px-4 py-2 bg-[#48c998]/20 text-[#2d9b6f] rounded-full text-sm font-bold mb-4"
+              >🍽️ KULINER KHAS</span
+            >
+            <h2 class="font-display text-3xl md:text-5xl font-bold mb-4 text-[#1a3a2a]">
+              Cita Rasa Manokwari
+            </h2>
+            <p class="text-[#555] max-w-2xl mx-auto">
+              Makanan Papua itu jujur: bumbu mantap, bahan segar, dan porsinya sering
+              bikin “tambah lagi” tanpa rapat dulu.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Papeda -->
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#48c998] card-hover shadow-lg"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Papeda%2C_Papua.jpg"
+                  alt="Papeda"
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://www.primarasa.co.id/images/images/papeda%281%29.jpg';"
+                />
+                <div class="img-overlay"></div>
+                <div class="absolute bottom-4 left-5 text-white">
+                  <p class="font-bold text-lg">Papeda</p>
+                  <p class="text-xs opacity-85">bubur sagu khas Papua</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-2 text-[#2d9b6f]">
+                  Papeda + Kuah Ikan
+                </h3>
+                <p class="text-sm text-[#555]">
+                  Tekstur kenyal-lengket dari sagu biasanya dipadukan dengan kuah ikan
+                  berbumbu (sering kuning). Kombinasi sederhana, tapi nagih.
+                </p>
+                <div class="mt-4 flex items-center gap-2 text-sm">
+                  <span class="text-[#f4b400]">★★★★★</span>
+                  <span class="text-xs text-[#555]">Ikon kuliner Papua</span>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Sagu Lempeng -->
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#48c998] card-hover shadow-lg"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Sagu_lempeng.jpg"
+                  alt="Sagu lempeng"
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://img.lazcdn.com/g/ff/kf/Sed41640d5b1f46bd8d5d3e755aac6b842.jpg_720x720q80.jpg';"
+                />
+                <div class="img-overlay"></div>
+                <div class="absolute bottom-4 left-5 text-white">
+                  <p class="font-bold text-lg">Sagu Lempeng</p>
+                  <p class="text-xs opacity-85">camilan tradisional</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-2 text-[#2d9b6f]">
+                  Sagu Lempeng
+                </h3>
+                <p class="text-sm text-[#555]">
+                  Olahan sagu dipanggang menjadi lempeng padat. Cocok jadi camilan atau
+                  teman minum hangat.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#48c998]/20 text-[#2d9b6f]"
+                    >Sagu</span
+                  >
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#2d9b6f]/10 text-[#2d9b6f]"
+                    >Tradisional</span
+                  >
+                </div>
+              </div>
+            </div>
+
+          
+
+            <!-- Keladi / Ubi Papua -->
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#48c998] card-hover shadow-lg"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Taro_root.jpg"
+                  alt="Keladi (taro)"
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIdFEsqalyHWMenA_C19Bi55kOy_G-UXxQYg&s';"
+                />
+                <div class="img-overlay"></div>
+                <div class="absolute bottom-4 left-5 text-white">
+                  <p class="font-bold text-lg">Keladi</p>
+                  <p class="text-xs opacity-85">pangan lokal</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-2 text-[#2d9b6f]">
+                  Keladi & Ubi Lokal
+                </h3>
+                <p class="text-sm text-[#555]">
+                  Selain sagu, umbi-umbian seperti keladi juga banyak dimanfaatkan sebagai
+                  sumber energi tradisional.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#48c998]/20 text-[#2d9b6f]"
+                    >Pangan</span
+                  >
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#2d9b6f]/10 text-[#2d9b6f]"
+                    >Lokal</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Bakar Batu -->
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#2d9b6f] card-hover shadow-lg"
+            >
+              <div class="h-56 overflow-hidden relative">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Bakar_batu_Papua.jpg"
+                  alt="Bakar batu"
+                  class="w-full h-full object-cover"
+                  onerror="this.src='https://www.gotravelaindonesia.com/wp-content/uploads/Pesta-Bakar-Batu-Papua.jpg';"
+                />
+                <div class="img-overlay"></div>
+                <div class="absolute bottom-4 left-5 text-white">
+                  <p class="font-bold text-lg">Bakar Batu</p>
+                  <p class="text-xs opacity-85">masak komunal</p>
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-2 text-[#2d9b6f]">
+                  Bakar Batu
+                </h3>
+                <p class="text-sm text-[#555]">
+                  Teknik memasak komunal menggunakan batu panas. Lebih dari makanan—ini
+                  simbol kebersamaan, syukur, dan persaudaraan.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#48c998]/20 text-[#2d9b6f]"
+                    >Tradisi</span
+                  >
+                  <span class="px-3 py-1 text-xs font-bold rounded-full bg-[#2d9b6f]/10 text-[#2d9b6f]"
+                    >Komunal</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal max-w-6xl mx-auto mt-12">
+            <div class="p-6 bg-[#f0f9f7] rounded-2xl border border-[#2d9b6f]/20">
+              <p class="font-bold text-[#1a3a2a] mb-1">Tip cepat (biar tampil “niat”):</p>
+              <p class="text-sm text-[#555]">
+                Kalau mau konsisten visual, pastikan semua gambar punya rasio yang mirip.
+                Di sini kita pakai <b>h-56</b> supaya grid rapi.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRADISI -->
+      <section id="tradisi" class="py-24 bg-[#f0f9f7]">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center mb-16 reveal">
+            <span
+              class="inline-block px-4 py-2 bg-[#2d9b6f]/20 text-[#2d9b6f] rounded-full text-sm font-bold mb-4"
+              >🎭 KEHIDUPAN MASYARAKAT</span
+            >
+            <h2 class="font-display text-3xl md:text-5xl font-bold mb-4 text-[#1a3a2a]">
+              Kearifan Lokal
+            </h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#48c998] card-hover shadow-lg"
+            >
+              <div class="h-48 overflow-hidden">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpvLOs1l-9dhdRG_6E5m_tpFPtKgRnzcCo6g&s"
+                  alt="Rumah Kaki Seribu"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-2">Rumah Kaki Seribu</h3>
+                <p class="text-sm text-[#555]">
+                  Arsitektur asli suku Arfak (Mod Aki Aksa) dengan banyak tiang penyangga
+                  untuk perlindungan.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#2d9b6f] card-hover shadow-lg"
+            >
+              <div class="h-48 overflow-hidden">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnfyR3pQlY2Wrb2w_aeEVhGbQa0_dygIKQdQ&s"
+                  alt="Ritual Tradisional"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-2">Upacara Bakar Batu</h3>
+                <p class="text-sm text-[#555]">
+                  Simbol persaudaraan dan rasa syukur masyarakat Papua yang dilakukan
+                  dengan memasak komunal.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#48c998] card-hover shadow-lg"
+            >
+              <div class="h-48 overflow-hidden">
+                <img
+                  src="https://baktinews.bakti.or.id/sites/default/files/images/noken.jpg"
+                  alt="Tas Noken"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-2">Tas Noken</h3>
+                <p class="text-sm text-[#555]">
+                  Tas tradisional dari serat kayu yang telah diakui UNESCO sebagai warisan
+                  budaya tak benda.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TARI -->
+      <section id="tari" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="text-center mb-16 reveal">
+            <span
+              class="inline-block px-4 py-2 bg-[#48c998]/20 text-[#2d9b6f] rounded-full text-sm font-bold mb-4"
+              >💃 GALERI SENI TARI</span
+            >
+            <h2 class="font-display text-3xl md:text-5xl font-bold mb-4 text-[#1a3a2a]">
+              Ekspresi Gerak & Budaya
+            </h2>
+            <p class="text-[#555] max-w-2xl mx-auto">
+              Tarian di Manokwari bukan sekadar hiburan, melainkan ungkapan syukur,
+              persatuan, dan penghormatan kepada leluhur.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#2d9b6f] card-hover shadow-lg"
+            >
+              <div class="h-64 overflow-hidden relative group">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ356rIcBBTfDGUFF8HAuP5Pt2iniQGtEh5mA&s"
+                  alt="Tari Tumbu Tanah"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <span class="text-white font-bold border-2 border-white px-4 py-2 rounded-full"
+                    >Khas Arfak</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-3 text-[#2d9b6f]">
+                  Tari Tumbu Tanah
+                </h3>
+                <p class="text-sm text-[#555] leading-relaxed">
+                  Dikenal juga sebagai tari Dansen, tarian khas suku Arfak. Penari bergerak
+                  melingkar sambil menghentakkan kaki, melambangkan persatuan masyarakat
+                  adat.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#48c998] card-hover shadow-lg"
+            >
+              <div class="h-64 overflow-hidden relative group">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Q63jUGKym4qIdkTpX-hqhwSICL0R47dOLw&s"
+                  alt="Tari Magasa"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <span class="text-white font-bold border-2 border-white px-4 py-2 rounded-full"
+                    >Tari Syukur</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-3 text-[#2d9b6f]">
+                  Tari Magasa
+                </h3>
+                <p class="text-sm text-[#555] leading-relaxed">
+                  Tarian syukur setelah panen atau menyambut kemenangan. Gerakannya mengikuti
+                  irama lagu tradisional tanpa alat musik, suasananya komunal dan hangat.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="reveal bg-white rounded-[2rem] overflow-hidden border-2 border-[#2d9b6f] card-hover shadow-lg"
+            >
+              <div class="h-64 overflow-hidden relative group">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX798ktarY_5koVT5olCAZ6yO3gcAOm7uxTA&s"
+                  alt="Tari Yospan"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <span class="text-white font-bold border-2 border-white px-4 py-2 rounded-full"
+                    >Tari Pergaulan</span
+                  >
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="font-display text-xl font-bold mb-3 text-[#2d9b6f]">
+                  Tari Yospan
+                </h3>
+                <p class="text-sm text-[#555] leading-relaxed">
+                  Tarian pergaulan yang melambangkan keceriaan pemuda, menggabungkan gerak
+                  dinamis dengan iringan musik tradisional.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="py-12 bg-[#1a3a2a] text-white text-center">
+        <div class="max-w-7xl mx-auto px-4">
+          <p class="font-display font-bold text-2xl text-[#48c998] mb-2">MANOKWARI MAJU</p>
+          <p class="text-sm opacity-60">© 2026 - Pelestarian Budaya Papua Barat</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) entry.target.classList.add("active");
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document
+        .querySelectorAll(".reveal, .reveal-left, .reveal-right")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
